@@ -1,0 +1,163 @@
+{% extends "/layout.jinja2" %}
+
+{% set disable_navbar = True %}
+{% block content_class %}full-page {{ content_class }}{% endblock %}
+
+{% block title %}AppEnlight - Features{% endblock %}
+
+{% block section_name %}features-section{% endblock %}
+
+{% block content %}
+    <div class="col-sm-12">
+
+        <h1 class="color-header" style="font-size: 350%; text-transform: uppercase; margin-top: 35px"><strong>Features</strong></h1>
+
+        <div class="gray-dots" style="margin: 15px 0px"><span class="fa fa-circle"></span><span
+                class="fa fa-circle"></span><span class="fa fa-circle"></span><span
+                class="fa fa-circle"></span><span class="fa fa-circle"></span><span
+                class="fa fa-circle"></span><span class="fa fa-circle"></span><span
+                class="fa fa-circle"></span></div>
+
+        <div class="row">
+
+
+            <div class="col-sm-8" id="contents">
+
+                <div id="error-reporting" class="feature-pane">
+                    <h3>Automatic Error Reporting</h3>
+                    <ul>
+                        <li><span class="fa fa-square"></span> <strong>Reports are grouped intelligently</strong> based on parameters like server,
+                            exception, and view name
+                        </li>
+                        <li><span class="fa fa-square"></span>Every report contains a stacktrace</li>
+                        <li><span class="fa fa-square"></span><strong>Inspect local frame variables</strong> from stacktraces</li>
+                        <li><span class="fa fa-square"></span>Attach custom context data to reports</li>
+                        <li><span class="fa fa-square"></span>Inpect separate occurences of error in a group</li>
+                        <li><span class="fa fa-square"></span><strong>See trends of your exceptions</strong> to help you
+                            decide which areas of your application need the most work
+                        </li>
+                        <li><span class="fa fa-square"></span>View application logs occurring during a specific request</li>
+                        <li><span class="fa fa-square"></span>View slow calls and layer breakdown of request execution</li>
+                        <li><span class="fa fa-square"></span>View a <strong>list of users affected</strong> by a bug</li>
+                        <li><span class="fa fa-square"></span>Access all request parameters in exception reports</li>
+                        <li><span class="fa fa-square"></span><strong>Search everything in your reports</strong> for error, server, priority, occurences, average
+                            duration, url path, namespace, and anything you're looking for
+                        </li>
+                        <li><span class="fa fa-square"></span><strong>Set prioritization rules for your reports</strong></li>
+                    </ul>
+
+                    <p>
+                        <iframe width="100%" height="480" src="https://www.youtube.com/embed/oRMzVrVPc5c" frameborder="0"
+                                allowfullscreen></iframe>
+
+                    </p>
+
+                </div>
+
+                <div id="performance-monitoring" class="feature-pane">
+                    <h3>Automatic Application Performance Monitoring</h3>
+                    <ul>
+                        <li><span class="fa fa-square"></span><strong>Slow request reporting with individual query and slow call details</strong></li>
+                        <li><span class="fa fa-square"></span><strong>Access application performance metrics</strong> and response time aggregation using tier and
+                            view name breakdowns</li>
+                        <li><span class="fa fa-square"></span>Have insight into all layers of your application including: <strong>SQL queries, time
+                            traces, noSql datastores, cache layers, remote connection times</strong>, and more
+                        </li>
+                        <li><span class="fa fa-square"></span>Have an overview of which views of your application are accessed the most and see their average
+                            response times
+                        </li>
+                        <li><span class="fa fa-square"></span>See global performance of all server instances grouped by hostnames</li>
+                        <li><span class="fa fa-square"></span><strong>Trace performance of your own functions</strong></li>
+                        <li><span class="fa fa-square"></span>See trends of slow reports</li>
+                        <li><span class="fa fa-square"></span>Full-text search reports on error, server, priority, occurences, average duration, url path,
+                            namespace, and more
+                        </li>
+                        <li><span class="fa fa-square"></span>Set prioritization rules for your reports</li>
+                    </ul>
+
+                    <p>
+                        <iframe width="100%" height="480" src="https://www.youtube.com/embed/LDQPhhYWFg8" frameborder="0"
+                                allowfullscreen></iframe>
+
+                    </p>
+
+                </div>
+
+                <div id="in-app-logging" class="feature-pane">
+                    <h3>In-app Logging</h3>
+                    <ul>
+                        <li><span class="fa fa-square"></span>Separate external and in-app log aggregation</li>
+                        <li><span class="fa fa-square"></span>Your application will stream logs that you can corellate with other reports</li>
+                        <li><span class="fa fa-square"></span><strong>Full-text search logs</strong> based on server, severity, log contents or namespace
+                        </li>
+                        <li><span class="fa fa-square"></span>See logs that belong only to a specific request</li>
+                    </ul>
+
+                    <p>
+                        <iframe width="100%" height="480" src="https://www.youtube.com/embed/jt6m_UcF8v0" frameborder="0"
+                                allowfullscreen></iframe>
+
+                    </p>
+
+                </div>
+
+                <div id="dashboard" class="feature-pane">
+                    <h3>Powerful Dashboard</h3>
+                    <ul>
+                        <li><span class="fa fa-square"></span><strong>Instantly see performance issues and trending errors in your apps</strong></li>
+                        <li><span class="fa fa-square"></span>Watch your dashboard with <strong>real-time report streaming</strong>
+                            and an overview of application/server health
+                        </li>
+                        <li><span class="fa fa-square"></span>Have insight into all layers of your application</li>
+                        <li><span class="fa fa-square"></span>See the <strong>most commonly used views breakdown</strong> with their associated performance
+                            statistics
+                        </li>
+                        <li><span class="fa fa-square"></span>See <strong>common slow queries and slow calls</strong> across your whole application</li>
+                        <li><span class="fa fa-square"></span>See reports assigned to you</li>
+                    </ul>
+
+                    <p>
+
+                        <iframe width="100%" height="480" src="https://www.youtube.com/embed/vEI3Dr_XYBU" frameborder="0"
+                                allowfullscreen></iframe>
+
+                    </p>
+
+                </div>
+
+                <div id="team-collaboration" class="feature-pane">
+                    <h3>Team Collaboration</h3>
+                    <ul>
+                        <li><span class="fa fa-square"></span><strong>Assign reports</strong> to other team members for review</li>
+                        <li><span class="fa fa-square"></span>Comment on reports with notifications</li>
+                        <li><span class="fa fa-square"></span>Give read/write permissions to other team members on per-application basis</li>
+                        <li><span class="fa fa-square"></span>Use 3rd party integration for notifications and external bug trackers:<br/>
+                            <strong>Bitbucket, Github, Jira, Slack, HipChat, Campfire, Flowdock, Webhooks,</strong> and more coming soon
+                        </li>
+                        <li><span class="fa fa-square"></span><strong>Configure multiple alert channels for notifications based on custom rules</strong>
+                        </li>
+                    </ul>
+
+                </div>
+
+            </div>
+
+            <div class="col-sm-4" id="menu">
+                <div class="list-group">
+                    <a href="#error-reporting" class="list-group-item">Automatic Error Reporting</a>
+                    <a href="#performance-monitoring" class="list-group-item">Application Performance Monitoring</a>
+                    <a href="#dashboard" class="list-group-item">Powerful Dashboard</a>
+                    <a href="#in-app-logging" class="list-group-item">In-app Logging</a>
+                    <a href="#team-collaboration" class="list-group-item">Team Collaboration</a>
+                </div>
+
+            </div>
+
+
+            <div class="clearfix"></div>
+
+        </div>
+
+    </div>
+
+{% endblock %}

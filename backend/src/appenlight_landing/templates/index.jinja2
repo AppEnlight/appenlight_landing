@@ -1,0 +1,274 @@
+{% extends "layout_base.jinja2" %}
+{% block container_style %}{% endblock %}
+{% block section_name %}index-page{% endblock %}
+{% set layout_disable_menu = True %}
+{% block page_title %}{% endblock %}
+
+{% block index_announcement %}
+    <div class="text-center announcement">
+        AppEnlight is now <strong>Open Source</strong>!
+        <a href="https://rhodecode.com/blog/116/appenlight-application-performance-monitoring-is-now-open-source"><strong>Read more here...</strong></a>
+    </div>
+{% endblock %}
+
+
+{% block outer_content %}
+
+
+    <div id="banner">
+        <div class="pattern">
+            <div class="container">
+                <div class="row text-center">
+                    <h1 style="margin: 190px 0px 0px 0px; font-size: 400%">Performance, exception, and uptime<br/>
+                        monitoring for the Web</h1>
+
+                    <p style="margin-top: 40px; text-shadow: 0px 0px 1px #000000"><strong>We keep an eye on your
+                        applications and notify you about performance issues and errors.</strong></p>
+
+                    <p style="margin-bottom: 50px; text-shadow: 0px 0px 1px #000000"><strong>It's <em
+                            style="color: #ff8400">completely
+                        free</em> to monitor your software.</strong></p>
+
+                    <a href="https://appenlight.com" class="btn btn-green"
+                       style="margin-bottom: 80px">Sign up for free</a>
+
+                    <div class="devices"><img src="/static/images/sections/index/devices.png" class="img-responsive"
+                                              style="display: inline-block"></div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="get-account">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-6">
+                    <h4>Get Your Free Account</h4>
+
+                    <p class="color-secondary"><strong>START MONITORING</strong> - your users will enjoy a great
+                        experience and you will sleep better.</p>
+                </div>
+                <div class="col-xs-5 text-right">
+                    <a href="https://appenlight.com" class="btn btn-green">Sign Up for Free</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div id="main-features">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 description"><h2>Error Collection</h2>
+
+                    <div class="gray-dots" style="margin: 15px 0px 15px"><span class="fa fa-circle"></span><span
+                            class="fa fa-circle"></span><span class="fa fa-circle"></span><span
+                            class="fa fa-circle"></span><span class="fa fa-circle"></span><span
+                            class="fa fa-circle"></span><span class="fa fa-circle"></span><span
+                            class="fa fa-circle"></span></div>
+
+                    <p class="color-secondary">Watch AppEnlight's dashboard as you deploy to instantly see any issues
+                        in real-time.</p>
+
+                    <p class="color-secondary">There is always a chance you might miss an issue while manually browsing
+                        your logs - detailed stack traces will help you debug issues faster than ever,
+                        and you can take advantage of the intelligent report grouping and search engine.</p>
+
+                </div>
+                <div class="col-sm-6 text-left"><img src="/static/images/sections/index/ipad_error_collection.png"
+                                                     class="img-responsive"
+                                                     style="display: inline-block"></div>
+            </div>
+        </div>
+        <div id="performance-monitoring">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-sm-6 text-right"><img
+                            src="/static/images/sections/index/ipad_performance_collection.png"
+                            class="img-responsive"
+                            style="display: inline-block"></div>
+                    <div class="col-sm-6 description"><h2>Performance Monitoring</h2>
+
+                        <div class="gray-dots"><span class="fa fa-circle"></span><span
+                                class="fa fa-circle"></span><span class="fa fa-circle"></span><span
+                                class="fa fa-circle"></span><span class="fa fa-circle"></span><span
+                                class="fa fa-circle"></span><span class="fa fa-circle"></span><span
+                                class="fa fa-circle"></span></div>
+
+                        <p class="color-secondary">Our client measures bottlenecks of your code so you can
+                            optimize queries and slow calls where it matters the most for your users.</p>
+
+                        <p class="color-secondary">You gain insight into application-level metrics - from noSQL and
+                            RDBMS to multiple remote APIs - that are typically hard to manually debug and optimize.</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+
+            <div class="row">
+                <div class="col-sm-6 description"><h2>Logging</h2>
+
+                    <div class="gray-dots"><span class="fa fa-circle"></span><span
+                            class="fa fa-circle"></span><span class="fa fa-circle"></span><span
+                            class="fa fa-circle"></span><span class="fa fa-circle"></span><span
+                            class="fa fa-circle"></span><span class="fa fa-circle"></span><span
+                            class="fa fa-circle"></span></div>
+
+                    <p class="color-secondary">Add logging to your application to centrally track and segment relevant
+                        information.</p>
+
+                    <p class="color-secondary">Get notified of fraud attempts, break-ins, or any suspicious activity.</p>
+
+                    <p class="color-secondary">Our servers are smart enough to figure out log entries belonging to
+                        specific performance or exception requests.</p>
+
+                </div>
+                <div class="col-sm-6 text-left"><img src="/static/images/sections/index/ipad_log_collection.png"
+                                                     class="img-responsive"
+                                                     style="display: inline-block"></div>
+            </div>
+        </div>
+        <div id="uptime-monitoring" style="margin-bottom: 0px">
+            <div class="container">
+
+                <div class="row">
+                    <div class="col-sm-6 text-right"><img src="/static/images/sections/index/ipad_uptime_collection.png"
+                                                          class="img-responsive"
+                                                          style="display: inline-block"></div>
+                    <div class="col-sm-6 description"><h2>Uptime Monitoring</h2>
+
+                        <div class="gray-dots"><span class="fa fa-circle"></span><span
+                                class="fa fa-circle"></span><span class="fa fa-circle"></span><span
+                                class="fa fa-circle"></span><span class="fa fa-circle"></span><span
+                                class="fa fa-circle"></span><span class="fa fa-circle"></span><span
+                                class="fa fa-circle"></span></div>
+
+
+                        <p class="color-secondary">Know when your application becomes unreachable.
+                            See any service interruptions, and get notified about any availability issues.</p>
+
+                        <p class="color-secondary">Measure uptime and response times to your frontend.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="set-up">
+        <div class="pattern">
+            <div class="container">
+                <div class="row text-center">
+                    <h3 style="font-size: 200%">Set up your app in <strong>under 5 minutes</strong>.</h3>
+
+                    <div class="gray-dots"><span class="fa fa-circle"></span><span
+                            class="fa fa-circle"></span><span class="fa fa-circle"></span><span
+                            class="fa fa-circle"></span><span class="fa fa-circle"></span><span
+                            class="fa fa-circle"></span><span class="fa fa-circle"></span><span
+                            class="fa fa-circle"></span></div>
+
+                    <div style="text-align: center; margin-bottom: 30px">
+                        <img src="/static/images/sections/index/front-logos/ix-python.png" alt="Python"
+                             style="margin-right: 30px"/>
+                        <img src="/static/images/sections/index/front-logos/ix-django.png" alt="Django"
+                             style="margin-right: 30px"/>
+                        <img src="/static/images/sections/index/front-logos/ix-pyramid.png" alt="Pyramid"
+                             style="margin-right: 30px"/>
+                        <img src="/static/images/sections/index/front-logos/ix-flask.png" alt="Flask"
+                             style="margin-right: 30px"/>
+                        <img src="/static/images/sections/index/front-logos/ix-js.png" alt="JS"/>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container" id="how-it-works">
+        <div class="row text-center">
+            <h3 style="font-size: 200%">How it works</h3>
+
+            <div class="gray-dots"><span class="fa fa-circle"></span><span
+                    class="fa fa-circle"></span><span class="fa fa-circle"></span><span
+                    class="fa fa-circle"></span><span class="fa fa-circle"></span><span
+                    class="fa fa-circle"></span><span class="fa fa-circle"></span><span
+                    class="fa fa-circle"></span></div>
+
+            <div class="col-sm-4 step-1">
+                <div style="text-align: center"><span class="circle"><img style="margin-top: 42px"
+                                                                          src="/static/images/sections/index/step-1.png?r=1"/></span>
+                </div>
+
+                <h3>You add our monitoring agent</h3>
+
+                <div class="orange-dots" style="margin: 25px 0px 25px"><span class="fa fa-circle"></span><span
+                        class="fa fa-circle"></span><span class="fa fa-circle"></span></div>
+                <p class="text-justify">You add a small piece of middleware (our client) to your applications.</p>
+
+                <p class="text-justify"><strong>Integration usually takes less than 5 minutes.</strong></p>
+
+                <p class="text-justify"><strong>Compatible with</strong>: python, javascript, nodejs, php, ruby, and
+                    more...</p>
+
+
+            </div>
+            <div class="col-sm-4 step-2">
+                <div style="text-align: center">
+                    <span class="circle"><img style="margin: 35px"
+                                              src="/static/images/sections/index/step-2.png?r=1"/></span>
+
+                </div>
+                <h3>We watch your application's health</h3>
+
+                <div class="orange-dots" style="margin: 25px 0px 25px"><span class="fa fa-circle"></span><span
+                        class="fa fa-circle"></span><span class="fa fa-circle"></span></div>
+                <p class="text-justify">The client starts sending performance information, exceptions and logs of your
+                    application to our
+                    service.</p>
+
+                <p class="text-justify">We will start sending you alerts, show performance bottlenecks, and breakdown
+                    where your application needs the most work.</p>
+
+            </div>
+            <div class="col-sm-4 step-3">
+                <div style="text-align: center"><span class="circle"><img style="margin-top: 42px"
+                                                                          src="/static/images/sections/index/step-3.png?r=1"/></span>
+                </div>
+                <h3>Fix problems at the speed of light</h3>
+
+                <div class="orange-dots" style="margin: 25px 0px 25px"><span class="fa fa-circle"></span><span
+                        class="fa fa-circle"></span><span class="fa fa-circle"></span></div>
+                <p class="text-justify">You will fix errors and regressions faster than ever, before your clients can
+                    notice an issue.</p>
+
+                <p class="text-justify">You can see all of this data - nearly in realtime - inside our friendly dashboard.</p>
+
+            </div>
+
+
+        </div>
+    </div>
+
+    <div id="recommendations" class="hidden">
+        <div class="pattern">
+            <div class="container text-center">
+                <div class="row">
+
+                    <h2>Recommendations</h2>
+
+                    <div class="gray-dots" style="margin: 10px 0px 25px"><span class="fa fa-circle"></span><span
+                            class="fa fa-circle"></span><span class="fa fa-circle"></span><span
+                            class="fa fa-circle"></span><span class="fa fa-circle"></span><span
+                            class="fa fa-circle"></span><span class="fa fa-circle"></span><span
+                            class="fa fa-circle"></span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "/layout_base.jinja2" %}
+
+{% block outer_content %}
+<!-- Begin page content -->
+<div class="container">
+
+    <div {% block ng_view %}{% endblock %}>
+        <div class="row">
+            <!-- container -->
+            <!-- content -->
+            {% block content %}{% endblock %}
+            <!-- content -->
+            <!-- container -->
+        </div>
+    </div>
+</div>
+
+{% endblock %}

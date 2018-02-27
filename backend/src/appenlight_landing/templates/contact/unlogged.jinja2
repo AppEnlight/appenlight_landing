@@ -1,0 +1,42 @@
+{% extends "/layout.jinja2" %}
+{% block ng_app %}{% endblock %}
+{% set disable_navbar = True %}
+
+{% block section_name %}contacts{% endblock %}
+{% block page_title %}{% endblock %}
+
+{% block content %}
+    <div class="col-sm-5 col-sm-offset-1 text-center">
+        <h2>We love getting feedback</h2>
+
+        <p>If you have any comments or questions regarding AppEnlight
+            service,
+            our policies, plans, or free offering, please send us an email.
+            We will respond and help you as soon as possible.
+        </p>
+        <hr/>
+        <p><strong>We always try to deliver top notch support for our users, so never
+        hesitate to contact us for help on client integration or feature requests.</strong></p>
+        <hr/>
+        <p class="contact-mail">Contact: <strong>support@rhodecode.com</strong>
+        </p>
+
+        <p>
+            Also find us in <strong>#errormator</strong> on the Freenode IRC
+            server.
+        </p>
+    </div>
+
+    <div class="col-sm-4 text-center">
+        <h3>Address</h3>
+
+        <p><strong>RhodeCode, Inc.</strong></p>
+
+        <p><strong>830 Menlo Avenue - Suite 100</strong></p>
+
+        <p><strong>Menlo Park, California 94025</strong></p>
+        <p><strong>United States</strong></p>
+
+    </div>
+
+{% endblock %}

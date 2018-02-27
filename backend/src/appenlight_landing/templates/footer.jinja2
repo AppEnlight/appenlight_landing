@@ -1,0 +1,76 @@
+<div class="footer">
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-4"><strong>Product</strong>
+
+                <div class="orange-dots" style="margin: 10px 0px 25px"><span class="fa fa-circle"></span><span
+                        class="fa fa-circle"></span><span class="fa fa-circle"></span></div>
+                <ul>
+                    <li><a href="{{ request.route_url('features') }}">{{ 'Features' }}</a></li>
+                    </li>
+                    <li><a href="https://rhodecode.com/blog/116/appenlight-application-performance-monitoring-is-now-open-source">{{ 'Open Source' }}</a></li>
+                    </li>
+
+                </ul>
+            </div>
+            <div class="col-sm-4"><strong>Support</strong>
+
+                <div class="orange-dots" style="margin: 10px 0px 25px"><span class="fa fa-circle"></span><span
+                        class="fa fa-circle"></span><span class="fa fa-circle"></span></div>
+                <ul>
+                    <li><a href="{{ request.route_url('pages',page=('api','main')) }}">Developer docs</a></li>
+                    <li><a href="https://docs.rhodecode.com/RhodeCode-Appenlight/">Administration docs</a></li>
+                    <li><a href="{{ request.route_url('contact') }}">{{ _('Contact') }}</a></li>
+                </ul>
+            </div>
+
+            <div class="col-sm-4"><strong>AppEnlight</strong>
+
+                <div class="orange-dots" style="margin: 10px 0px 25px"><span class="fa fa-circle"></span><span
+                        class="fa fa-circle"></span><span class="fa fa-circle"></span></div>
+                <ul>
+
+                    <li>
+                        <a href="{{ request.route_url('pages',page='terms-of-service') }}">{{ _('Terms Of Service') }}</a>
+                    </li>
+                    <li>
+                        <a href="{{ request.route_url('pages',page='privacy-policy') }}">{{ _('Privacy Policy') }}</a>
+                    </li>
+                    <li>
+                        <a href="{{ request.route_url('pages',page='credits') }}">{{ _('Credits') }}</a>
+                    </li>
+                </ul>
+            </div>
+{#            <div class="col-sm-3">#}
+{#                <strong>Follow Us</strong>#}
+{##}
+{#                <div class="orange-dots" style="margin: 10px 0px 25px"><span class="fa fa-circle"></span><span#}
+{#                        class="fa fa-circle"></span><span class="fa fa-circle"></span></div>#}
+{#                <ul>#}
+{#                    <li>#}
+{#                        <a href="https://plus.google.com/102503394674271195249" rel="publisher">#}
+{#                            <span class="fa-stack fa-2x">#}
+{#                                <span class="fa fa-circle-thin fa-stack-2x"></span>#}
+{#                            <span class="fa fa-google-plus fa-stack-1x"></span>#}
+{#                                </span>#}
+{#                        </a>#}
+{#                        <a href="https://twitter.com/appenlight" rel="publisher">#}
+{#                            <span class="fa-stack fa-2x">#}
+{#                                <span class="fa fa-circle-thin fa-stack-2x"></span>#}
+{#                            <span class="fa fa-twitter fa-stack-1x"></span>#}
+{#                                </span>#}
+{#                        </a>#}
+{##}
+{#                    </li>#}
+{#                </ul>#}
+{##}
+{#            </div>#}
+        </div>
+
+        
+
+    </div>
+
+    <div id="app_instance">{{ errormator_app_instance }}</div>
+</div>

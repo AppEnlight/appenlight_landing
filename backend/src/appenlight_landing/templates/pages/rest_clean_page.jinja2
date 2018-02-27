@@ -1,0 +1,13 @@
+{% extends "/layout.jinja2" %}
+{% block ng_app %}{% endblock %}
+{% set disable_navbar = True %}
+
+{% block title %}AppEnlight - {{ title }}{% endblock %}
+
+{% block content_class %}full-page {{ content_class }}{% endblock %}
+{% set layout_disable_menu = True %}
+{% block content %}
+    <div class="col-sm-12">
+        {{ html_body|safe }}
+    </div>
+{% endblock %}

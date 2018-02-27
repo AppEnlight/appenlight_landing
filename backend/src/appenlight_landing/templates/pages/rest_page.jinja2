@@ -1,0 +1,89 @@
+{% extends "/layout.jinja2" %}
+{% block ng_app %}{% endblock %}
+{% set disable_navbar = True %}
+
+{% block content_class %}full-page {{ content_class }}{% endblock %}
+
+{% block title %}AppEnlight - {{ title }}{% endblock %}
+
+{% block section_name %}pages-section{% endblock %}
+
+{% block content %}
+
+    {% block pages_announcement %}
+        <div class="col-sm-12">
+        <div class="text-center announcement-sm">
+            AppEnlight is now <strong>Open Source</strong>!
+            <a href="https://rhodecode.com/blog/116/appenlight-application-performance-monitoring-is-now-open-source"><strong>Read more here...</strong></a>
+        </div>
+        </div>
+    {% endblock %}
+
+    <div class="col-sm-4">
+        <ul class="doc-menu">
+            <li><a href="{{request.route_url('/')}}"><strong>Front page</strong></a></li>
+            <li><a href="{{request.route_url('pages',page=('api','main'))}}"><strong>Getting started</strong></a></li>
+            <li><strong>Clients</strong>
+                <ul class="doc-sub-menu">
+                    <li><strong>Python client</strong>
+                        <ul class="doc-sub-menu">
+                            <li><a href="{{request.route_url('pages',page='python/introduction')}}">Introduction</a></li>
+                            <li><a href="{{request.route_url('pages',page='python/django-exception-logging')}}">Django integration</a></li>
+                            <li><a href="{{request.route_url('pages',page='python/pyramid-exception-logging')}}">Pyramid integration</a></li>
+                            <li><a href="{{request.route_url('pages',page='python/flask-exception-logging')}}">Flask integration</a></li>
+                            <li><a href="{{request.route_url('pages',page='python/pylons-exception-logging')}}">Pylons integration</a></li>
+                            <li><a href="{{request.route_url('pages',page='python/tg2-exception-logging')}}">TurboGears2 integration</a></li>
+                            <li><a href="{{request.route_url('pages',page='python/celery-exception-logging')}}">Celery integration</a></li>
+                            <li><a href="{{request.route_url('pages',page='python/manual-exception-logging')}}">Manual reporting and timing</a></li>
+                            <li><a href="{{request.route_url('pages',page='python/tagging-logs-and-requests')}}">Tagging logs and requests</a></li>
+                            <li><a href="{{request.route_url('pages',page='python/other-wsgi-exception-logging')}}">Other WSGI integrations</a></li>
+                            <li><a href="{{request.route_url('pages',page='python/client-configuration')}}">Advanced configurations</a></li>
+                        </ul>
+                    </li>
+                    <li><strong>Javascript client</strong>
+                        <ul class="doc-sub-menu">
+                            <li><a href="{{request.route_url('pages',page='javascript/introduction')}}">Introduction</a></li>
+                            <li><a href="{{request.route_url('pages',page='javascript/client-configuration')}}">Basic client configuration</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <strong>Ruby, PHP, nodejs and others</strong>
+                <ul class="doc-sub-menu">
+                    <li><a href="{{request.route_url('pages',page='sentry/compatible-exception-logging')}}"><strong>Sentry compatible endpoint</strong></a></li>
+                    <li><a href="{{request.route_url('pages',page='airbrake/compatible-exception-logging')}}"><strong>Airbrake compatible endpoint</strong></a></li>
+                    <li><a href="{{request.route_url('pages',page='php/exception-logging')}}"><strong>PHP clients</strong></a></li>
+                </ul>
+            </li>
+            <li><strong>Usage examples</strong>
+                <ul class="doc-sub-menu">
+                    <li><a href="{{request.route_url('pages',page='usage-examples/monitoring-metrics')}}">Monitor and alert on metrics</a></li>
+                </ul>
+            </li>
+            <li><strong>API Documentation</strong>
+                <ul class="doc-sub-menu">
+                    <li><a href="{{request.route_url('pages',page='api/rate-limits')}}">Rate limits and quotas</a></li>
+                    <li><a href="{{request.route_url('pages',page='api/grouping')}}">Grouping</a></li>
+                    <li><a href="{{request.route_url('pages',page='api/0.5/reports')}}">Reports JSON API</a></li>
+                    <li><a href="{{request.route_url('pages',page='api/0.5/logs')}}">Logs JSON API</a></li>
+                    <li><a href="{{request.route_url('pages',page='api/0.5/general_metrics')}}">Metrics JSON API</a></li>
+                    <li><a href="{{request.route_url('pages',page='api/0.5/request_metrics')}}">Request Metrics JSON API</a></li>
+                </ul>
+            </li>
+            <li><strong>Bug Trackers/Feature requests</strong>
+                <ul class="doc-sub-menu">
+                    <li><a href="https://github.com/AppEnlight/main/issues?state=open">AppEnlight service</a></li>
+                    <li><a href="https://github.com/AppEnlight/errormator-client-python/issues">Python client</a></li>
+                    <li><a href="https://github.com/AppEnlight/errormator-client-js/issues">Javascript client</a></li>
+                </ul>
+            </li>
+        </ul>
+
+    </div>
+
+
+    <div class="col-sm-8 docs-section">
+        {{ html_body|safe }}
+    </div>
+{% endblock %}

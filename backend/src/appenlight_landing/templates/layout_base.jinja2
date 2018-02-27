@@ -1,0 +1,85 @@
+{% set cacheBust = 761 %}
+<!DOCTYPE html>
+<html  {% block ng_controller %}{% endblock %}>
+<head>
+    <title>{% block title %}Application performance, exception and error monitoring for Python,
+        Django, Flask and Javascript - AppEnlight{% endblock %}</title>
+    {% block meta %}
+        <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+        <meta name="robots" content="all">
+        <meta name="Description"
+              content="AppEnlight provides a helpful interface to let you and your team save time spent on debugging and reproducing issues from a production environment.">
+        <meta name="Keywords"
+              content="monitoring, debugging, alerting, errors, programming, python, ruby, django, flask, profiling">
+        <meta name="Author" content="RhodeCode - sales@rhodecode.com">
+        <meta name="Copyright" content="RhodeCode">
+        <link href="https://plus.google.com/102503394674271195249" rel="publisher"/>
+        <meta name="google-site-verification" content="ZOLAcaKA-Egq96ftTI--TXw4nG7k3IgmyOClA6yLrX8" />
+        <link rel="shortcut icon" href="{{ request.static_url('appenlight_landing:static/favicon.ico')}}"/>
+    {% endblock %}
+    {% block styles %}
+        <link href="{{ request.static_url('appenlight_landing:static/css/front_landing.css', _query={'rev':cacheBust}) }}" rel="stylesheet" type="text/css"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% endblock %}
+    {% if request.registry.settings.get('appenlight.public_api_key') %}
+        <script type="application/javascript">
+            var initAppEnlight = function () {
+                if(this.readyState!='loading'){
+                    AppEnlight.init({
+                        apiKey:'{{ request.registry.settings.get('appenlight.public_api_key') }}',
+                        windowOnError: 1 // enable to hook to window.onerror
+                    });
+                    // setting request info is completly optional
+                    AppEnlight.setRequestInfo({
+                        server:"{{ request.environ.get('SERVER_NAME', '<unknown>') }}",
+                        {% if request.user %}
+                            username:'{{ request.user.user_name }}',
+                        {% endif %}
+                        ip: "{{ request.environ.get('REMOTE_ADDR', '') }}",
+                        request_id:"{{ request.environ.get('appenlight.request_id', '') }}"
+                    });
+                }
+            };
+            //  load the script asynchroneously
+            var scrElem = document.createElement('script');
+            scrElem.type = 'text/javascript';
+            scrElem.async = true;
+            scrElem.onload = scrElem.onreadystatechange = initAppEnlight;
+            scrElem.src = '//cdn.jsdelivr.net/appenlight/0.4.1/appenlight-client.min.js';
+            var p = document.getElementsByTagName('script')[0];
+            p.parentNode.insertBefore(scrElem, p);
+        </script>
+    {% endif %}
+
+</head>
+<body class="{% block section_name %}default{% endblock %} unlogged" id="html_body">
+    <!-- Google Tag Manager -->
+    <noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-TP2X92"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-TP2X92');</script>
+    <!-- End Google Tag Manager -->
+<div class="extra-deco1"></div>
+<div class="extra-deco2"></div>
+
+{% block index_announcement %}
+{% endblock %}
+
+    <div id="holder">
+    {# required to trick jinja2 scopes #}
+    <!--  {{ disable_navbar }} -->
+    {% include "/header.jinja2" with context %}
+    <div id="outer-content">
+        {% block outer_content %}Content{% endblock %}
+    </div>
+
+    {% include "/footer.jinja2" %}
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0/angular.min.js"></script>
+
+</body>
+</html>

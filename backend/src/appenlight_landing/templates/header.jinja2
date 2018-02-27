@@ -1,0 +1,38 @@
+<!-- Fixed navbar -->
+<div id="top-navbar" class="navbar navbar-default navbar-fixed-top with-announcement" role="navigation">
+
+{% block header_announcement %}
+{% endblock %}
+
+<div class="pattern">
+    <div class="container">
+            <div class="navbar-header pull-left">
+                <a href="{{ request.route_url('/') }}" class="navbar-brand">
+                <div id="logo-normal" class="hidden-sm hidden-xs"></div>
+                <div id="logo-icon" class="visible-sm visible-xs"></div>
+                </a>
+            </div>
+
+            <div class="container-fluid">
+                <div>
+
+                <ul class="nav navbar-nav pull-right">
+                    <li>
+                        <a href="{{request.route_url('features')}}">{{ 'Features' }}</a>
+                    </li>
+                    <li>
+                        <a href="{{ request.route_url('pages',page=('api','main')) }}">{{ 'Developers' }}</a>
+                    </li>
+                    <li><a style="min-width: 120px;" href="https://appenlight.com"
+                           class="btn btn-orange">{{ _('Sign In') }}</a></li>
+                </ul>
+
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+    </div>
+</div>
+
+    {% block navbar_announcement %}
+    {% endblock %}
+
+</div>

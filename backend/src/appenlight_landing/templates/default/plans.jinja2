@@ -1,0 +1,197 @@
+{% extends "/layout.jinja2" %}
+
+{% set disable_navbar = True %}
+{% block content_class %}full-page {{ content_class }}{% endblock %}
+
+{% block title %}AppEnlight - Plans{% endblock %}
+
+{% block section_name %}plans-section{% endblock %}
+
+{% block content %}
+    <div class="row">
+    <div class="col-lg-12">
+
+        <h1 class="color-header text-center" style="font-size: 350%; text-transform: uppercase"><strong>Exceptional services start
+            free</strong></h1>
+
+
+        <h3 class="text-center"><strong>So you get one month of Pro plan on signup </strong>(No CC required).</h3>
+        <h4 class="text-center" style="margin-bottom: 45px">After 30 days you can still use our <strong>free forever plan!</strong></h4>
+
+
+        <div class="row">
+            <div class="plan col-sm-12 free_normal">
+                <div style="height: 10px; background-color: #5DA65C"></div>
+                <div class="plan-wrapper" style="border-radius: 0px 0px 5px 5px">
+                    <div class="row">
+                        <div class="col-sm-4">
+                            <h3 class="price"><strong style="font-size: 300%">FREE PLAN</strong></h3>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <div class="transfer"><strong class="big">50,000</strong><br><em>events/month</em>
+                            </div>
+                        </div>
+                        <div class="col-sm-3">
+                            <div class="storage" style="height: auto; padding-top: 10px"><strong>7 day report</strong> history<br>
+                                <strong>2 day</strong> log/metric history
+                            </div>
+                        </div>
+
+                        <div class="col-sm-3 text-center">
+                            <div class="signup-button" style="padding-top: 5px">
+                                <a href="http://rhodecode.com" style="text-transform: none"
+                                   class="btn orange-special"><strong>Get free monitoring</strong></a>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <div class="row">
+
+            <div class="plan col-sm-4">
+
+                <div class="plan-wrapper">
+                    <h3 class="price"><sup>$</sup><strong class="big">XX</strong><em>/month</em>
+                    </h3>
+
+                    <div class="transfer"><strong
+                            class="big">XX</strong><br/><em>events/month</em>
+                    </div>
+                    <hr/>
+                    <div class="storage"><strong>90 day</strong> report history<br/>
+                        <strong>30 day</strong> log/metric history
+                        <br/><strong>No team members</strong>
+                    </div>
+
+                    <div class="signup-button">
+                        <a class="btn orange-special" style="text-transform: none"
+                           href="http://appenlight.rhodecode.com"><strong>{{ _('Start monitoring') }}</strong></a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="plan col-sm-4">
+
+                <div class="plan-wrapper">
+                    <h3 class="price"><sup>$</sup><strong class="big">XX</strong><em>/month</em>
+                    </h3>
+
+                    <div class="transfer"><strong
+                            class="big">XX</strong><br/><em>events/month</em>
+                    </div>
+                    <hr/>
+                    <div class="storage"><strong>90 day</strong> report history<br/>
+                        <strong>30 day</strong> log/metric history
+                        <br/><strong>No team members</strong>
+                    </div>
+
+                    <div class="signup-button">
+                        <a class="btn orange-special" style="text-transform: none"
+                           href="http://appenlight.rhodecode.com"><strong>{{ _('Start monitoring') }}</strong></a>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="plan col-sm-4 best-plan">
+                <h2><sup>most popular plan</sup></h2>
+
+                <span class="best-plan-marker"></span>
+
+                <div class="plan-wrapper">
+                    <h3 class="price"><sup>$</sup><strong class="big">XX</strong><em>/month</em>
+                    </h3>
+
+                    <div class="transfer"><strong
+                            class="big">XX</strong><br/><em>events/month</em>
+                    </div>
+                    <hr/>
+                    <div class="storage"><strong>90 day</strong> report history<br/>
+                        <strong>30 day</strong> log/metric history
+                    </div>
+
+                    <div class="signup-button">
+                        <a class="btn orange-special" style="text-transform: none"
+                           href="http://appenlight.rhodecode.com"><strong>{{ _('Start monitoring') }}</strong></a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+
+    <div class="row information" style="margin-top: 45px; margin-bottom: 45px">
+        <div class="col-sm-4">
+            <h3>What is an event?</h3>
+
+            <p>Everything written to our API is considered an event, so individual log entries, reports or new
+                performance metric are considered an event.</p>
+        </div>
+
+        <div class="col-sm-4">
+            <h3>What happens when I reach my quota?</h3>
+
+            <p>Nothing at all, <strong>you always pay fixed amount of money
+                for the plan you agreed on</strong>.</p>
+
+            <p>We currently don't have plans to add any automated systems
+                that would block your traffic is you go over quota(except free plan).</p>
+
+        </div>
+
+        <div class="col-sm-4">
+            <h3>No contracts</h3>
+
+            <p>On signup you have one month where <strong>without
+                any obligations</strong> you can see for yourself
+                which plan is best suited for you and measure the amount of
+                data your app is sending.
+                <strong>You can upgrade or downgrade anytime</strong>.</p>
+
+        </div>
+
+
+    </div>
+    <div class="row information" style="margin-top: 45px; margin-bottom: 45px">
+
+        <div class="col-sm-4">
+            <h3>Who can see my data?</h3>
+
+            <p>AppEnlight provides flexible permission system that allows you
+                to set permissions to your team members on a per-application basis.</p>
+
+
+        </div>
+
+        <div class="col-sm-4">
+            <h3>Non-profit or Open Source projects</h3>
+
+            <p>If you run open source project or other non-profit
+                organization - <a href="{{ request.route_url('contact') }}">
+                    <strong>contact us</strong></a>.
+                We will be happy to provide you with our large plan
+                for free.
+            </p>
+
+        </div>
+
+        <div class="col-sm-4">
+
+            <h3>I need a bigger plan</h3>
+
+            <p>You can <a href="{{ request.route_url('contact') }}"><strong>contact
+                us </strong></a> and tell us what are your organisation requirements - we can offer volume discounts for big deployments.</p>
+        </div>
+
+    </div>
+
+
+{% endblock %}
